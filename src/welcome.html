@@ -1,0 +1,35 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="./views/throttle"></require>
+  <require from="./views/formatters"></require>
+  <require from="./views/string-formatting"></require>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>${title}</h1>
+        <h4>Included in this demo:</h4>
+        <ul>
+            <li>Checkbox ref with corresponding template binding</li>
+            <li>template components</li>
+            <li>binding behaviors (standard and custom)</li>
+            <li>bootstrap</li>
+            <li>global variables using Configuration</li>
+          </ul>
+      </div>
+    </div>
+
+    <hr>
+    <input type="checkbox" ref="hideBindings"> hide bindings template file
+    <throttle if.bind="!hideBindings.checked"></throttle>
+
+    <hr>
+    <input type="checkbox" ref="hideFormatters"> hide formatters template file
+    <formatters if.bind="!hideFormatters.checked"></formatters>
+
+    <hr>
+    <input type="checkbox" ref="hideStringFormatting"> hide string-formatting template file
+    <string-formatting if.bind="!hideStringFormatting.checked"></string-formatting>
+
+  </div>
+</template>
