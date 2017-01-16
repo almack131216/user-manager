@@ -12,7 +12,9 @@ import environment from './environment';
 export function configure(aurelia: Aurelia) {
   aurelia.use
     .standardConfiguration()
-    .feature('resources');
+    .developmentLogging()
+    .feature('resources')
+    .plugin('aurelia-table');
 
   if (environment.debug) {
     aurelia.use.developmentLogging();

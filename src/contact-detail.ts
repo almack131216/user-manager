@@ -8,6 +8,7 @@ interface Contact {
   firstName: string;
   lastName: string;
   email: string;
+  phoneNumber: string;
 }
 
 @inject(WebAPI, EventAggregator)

@@ -8,8 +8,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "au-table": "^0.1.12",
     "aurelia-animator-css": "^1.0.0",
     "aurelia-bootstrapper": "^1.0.0",
+    "aurelia-table": "^1.0.4",
     "bluebird": "^3.4.1",
     "bootstrap": "^3.3.7",
     "jquery": "^2.2.4",

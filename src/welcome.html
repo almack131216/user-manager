@@ -1,3 +1,32 @@
 <template>
     ${title}
+
+    <table class="table table-striped" aurelia-table="data.bind: users; display-data.bind: $displayData">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-mail</th>
+                <th>Telephone</th>
+                <th>Permission</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr repeat.for="contact of contacts" class="${contact.id === $parent.selectedId ? 'active' : ''}">
+                <td>${contact.id}</td>
+                <td>${contact.firstName}</td>
+                <td>${contact.lastName}</td>
+                <td><a href="mailto:${contact.email}">${contact.email}</a></td>
+                <td><a href="tel:${contact.phoneNumber}">${contact.phoneNumber}</a></td>
+                <td>${contact.permission}</td>
+                <td>
+                    <a route-href="route: contacts; params.bind: {id:contact.id}" click.delegate="$parent.select(contact)">
+                        edit
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </template>
