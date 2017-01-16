@@ -11,12 +11,14 @@ interface Contact {
 }
 
 @inject(WebAPI, EventAggregator)
-export class ContactDetail {
+export class ContactDetail {  
   routeConfig;
   contact: Contact;
   originalContact: Contact;
 
-  constructor(private api: WebAPI, private ea: EventAggregator) { }
+  constructor(private api: WebAPI, private ea: EventAggregator) {
+
+  }
 
   activate(params, routeConfig) {
     this.routeConfig = routeConfig;
